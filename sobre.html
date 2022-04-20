@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>STUDE-Sobre</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+  <!-- Bootstrap core CSS -->
+  <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="icon" href="stude_logo-icone.png" sizes="16x16" type="image/png">
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+</head>
+  <header>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">
+                  <img src="./stude_logov1.png" width="90" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="nova_instituição.html">Nova Instituição</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" onclick="changeColor()">Change Color</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <main>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+     
+      <div class="col-md-5">
+    
+      </div>
+    </div>
+  
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 ">
+        <h2 class="featurette-heading">Indicadores. <span class="text-muted">Através do planejamento do sistema
+            comparando resultados.</span></h2>
+        <p class="lead">A fim de cumprir o objetivo proposto, se faz necessário o desenvolvimento de um banco de dados
+          capaz de armazenar todas as informações que sejam pertinentes para a criação dos relatórios que de fato
+          mensuram o desempenho..</p>
+      </div>
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Big Data e <span class="text-muted">o STUDE .</span></h2>
+        <p class="lead">O projeto, tem como finalidade o profundo estudo analítico no sistema de ensino brasileiro, que
+          aparece na 61ª posição do ranking de 76 países sobre o nível de educação ao redor do Mundo, segundo o IMD
+          World Competitiveness Center. Isto é, a partir de copiosas quantidades de dados e uma arquitetura pensada nos
+          conceitos de Big Data, o STUDE (Sistema Tecnológico e Unificado de Dados para Ensino) é desenvolvido no
+          intuito de guiar o caminho de evolução da educação brasileira..</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="stude_logov1.png" alt="img" class="img-fluid">
+        <img src="download.png" alt="img" class="img-fluid">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <hr class="featurette-divider">
+    <!-- FOOTER -->
+    <div class="d-flex flex-column align-items-center">
+      <h4 class="mb-4">Desenvolvido por Aesirs Group</h4>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="progress-bar" />
+    <button class="back-to-top hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+      </svg>
+    </button>
+    <div class="progress-bar" />
+    <script>
+      const showOnPx = 100;
+      const backToTopButton = document.querySelector(".back-to-top");
+      const pageProgressBar = document.querySelector(".progress-bar");
+      const scrollContainer = () => {
+        return document.documentElement || document.body;
+      };
+
+      const goToTop = () => {
+        document.body.scrollIntoView({
+          behavior: "smooth"
+        });
+      };
+
+      document.addEventListener("scroll", () => {
+        console.log("Scroll Height: ", scrollContainer().scrollHeight);
+        console.log("Client Height: ", scrollContainer().clientHeight);
+
+        const scrolledPercentage =
+          (scrollContainer().scrollTop /
+            (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+          100;
+        pageProgressBar.style.width = `${scrolledPercentage}%`;
+        if (scrollContainer().scrollTop > showOnPx) {
+          backToTopButton.classList.remove("hidden");
+        } else {
+          backToTopButton.classList.add("hidden");
+        }
+      });
+      backToTopButton.addEventListener("click", goToTop);
+    </script>
+    </footer>
+    <!-- Fim footer -->
+  </main>
+  <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+</html>
